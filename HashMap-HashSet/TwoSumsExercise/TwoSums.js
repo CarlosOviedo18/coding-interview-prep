@@ -26,6 +26,6 @@ const twoSums = (nums, target) => {
   }
 };
 
-console.log(twoSums([2, 7, 11, 15], 18));
+console.log(twoSums([2, 7, 11, 15], 9));
 
 

@@ -32,32 +32,31 @@
 const validAnagrams = (s, t) => {
   const map = new Map();
 
-  const map1 = new Map();
-
   const arr1 = s.split("");
   const arr2 = t.split("");
 
-  for (palabra1 of arr1) {
+  for (const palabra1 of arr1) {
     if (map.has(palabra1)) {
       map.set(palabra1, map.get(palabra1) + 1);
     } else {
-      map.set(palabra1, +1);
+      map.set(palabra1, 1);
     }
   }
 
-  for (palabra2 of arr2) {
-    if (map1.has(palabra2)) {
-      map1.set(palabra2, map1.get(palabra2) + 1);
+  for (const palabra2 of arr2) {
+    if (map.has(palabra2)) {
+      map.set(palabra2, map.get(palabra2) - 1);
     } else {
-      map1.set(palabra2, +1);
+      map.set(palabra2, -1);
     }
   }
 
-//AQUI SE VALIDA LOS TOTALES
-
-
-return map
+  for (const valor of map.values()) {
+    if (valor !== 0) {
+      return false;
+    }
+  }
+  return true;
 };
 
 console.log(validAnagrams("anagram", "nagaram"));
-

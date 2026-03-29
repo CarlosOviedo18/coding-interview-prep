@@ -40,6 +40,12 @@ map.size; // → 1
 
 // ✅ Limpiar todo el Map
 map.clear();
+
+para  recoorr el map y hacer algo
+siempre se recodre recordar q el map es un objeto
+map.get(clave) → validar una letra
+map.values() → validar todos los valores
+map.entries() → validar clave + valor
 ```
 
 ### Recorrer un Map
