@@ -1,30 +1,28 @@
-
-
-
+//1. ¿Qué me están pidiendo?
+// 2. ¿Qué entra?
+// 3. ¿Qué sale?
+// 4. Dame un ejemplo pequeño
+// 5. ¿Cómo lo haría como humano?
+//  for (const [indice, valor] of nums.entries()) {
 const GroupAnagrams = (arr) => {
-    const map = new Map();
+  const map = new Map();
 
 
-    //  for (const [indice, valor] of nums.entries()) {
+  for (const valor of arr) {
 
-    for(const valor of arr ){
-        
-        if(map.has(valor)){
-            map.set( valor, map.get(valor) + 1)
-        }
-        map.set(valor, 1);
-        
+     const newValor = valor.split("").sort().join("")
+    map.set(valor, newValor);
+
+  }
+
+  for(const valor of map.values()){
+   
     
-    }
-
-    return map
+  }
 
 
 
+return map
 
-
-
-
-
-}
-console.log(GroupAnagrams(["eat","tea","tan","ate","nat","bat"]));
+};
+console.log(GroupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
