@@ -13,6 +13,8 @@ const GroupAnagrams = (arr) => {
      const newValor = valor.split("").sort().join("")
     map.set(valor, newValor);
 
+
+
   }
 
   for(const valor of map.values()){
