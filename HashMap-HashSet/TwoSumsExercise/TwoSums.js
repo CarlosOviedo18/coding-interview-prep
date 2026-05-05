@@ -6,12 +6,12 @@
 
 // 🧾 Ejemplo 1:
 // Entrada:
-// nums = [2, 7, 11, 15]
+// nums = [2,  17,1, 15]
 // target = 9
 
 // Salida:
 // [0, 1]
-
+ 
 const twoSums = (nums, target) => {
   const map = new Map();
 

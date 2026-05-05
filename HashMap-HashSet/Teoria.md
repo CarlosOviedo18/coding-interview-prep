@@ -33,7 +33,7 @@ map.has("nombre"); // → true
 map.has("apellido"); // → false
 
 // ✅ Eliminar un elemento
-map.delete("edad");
+map.delete("edad"); 
 
 // ✅ Ver cuántos elementos tiene
 map.size; // → 1
@@ -141,7 +141,7 @@ const tieneDuplicados = (arr) => {
 
   for (const elem of arr) {
     if (vistos.has(elem)) return true; // ¡ya lo vi antes!
-    vistos.add(elem);
+    vistso.add(elem);
   }
 
   return false; // ninguno se repitió
@@ -163,3 +163,27 @@ const tieneDuplicados = (arr) => {
 ---
 
 
+const GroupAnagrams = (arr) => {
+  const map = new Map();
+
+  for (const valor of arr) {
+
+
+
+     const newValor = valor.split("").sort().join("")
+  
+     
+     if(map.has(newValor)){
+      
+      map.set[(map.get(newValor) , arrWord.push(valor))] 
+
+     }else{
+       map.set(newValor,  []); 
+     }
+
+     
+
+  }
+return map
+};
+console.log(GroupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
